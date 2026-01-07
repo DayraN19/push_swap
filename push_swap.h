@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2025/12/29 17:20:24 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/01/06 14:33:29 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stddef.h>
+# include <math.h>
 
 /* ===== init ===== */
 t_stack_node	*new_node(int value);
@@ -65,48 +66,9 @@ void			sort_500(t_stack_node **a, t_stack_node **b);
 
 /* ===== sort utils ===== */
 int				ft_sqrt(int n);
+int				ft_strcmp(char *s1, char *s2);
 int				count_in_range(t_stack_node *a, int min, int max);
 int				get_max_index_pos(t_stack_node *b);
 void			push_back_to_a(t_stack_node **a, t_stack_node **b);
 
 #endif
-
-/*void		sa(t_stack_node **a, bool print);
-void		sb(t_stack_node **b, bool print);
-void    	ss(t_stack_node **a, t_stack_node **b, bool print);
-void		pa(t_stack_node **stack_a, t_stack_node **stack_b, bool print);
-void		pb(t_stack_node **stack_a, t_stack_node **stack_b, bool print);
-void		ft_rotate(t_stack_node **stack);
-void		ra(t_stack_node **stack_a, bool print);
-void		rb(t_stack_node **stack_b, bool print);
-void		rr(t_stack_node **stack_a, t_stack_node **stack_b, bool print);
-void		rev_rotate(t_stack_node **stack);
-void		rra(t_stack_node **stack_a, bool print);
-void		rrb(t_stack_node **stack_b, bool print);
-void		rrr(t_stack_node **stack_a, t_stack_node **stack_b, bool print);
-t_stack_node *new_node(int value);
-int			stack_len(t_stack_node *a);
-int			stack_sorted(t_stack_node *a);
-int			is_sorted(t_stack_node *stack);
-void		ft_push(t_stack_node **src, t_stack_node **dest);
-void		print_stack(t_stack_node *stack);
-void 		init_stack_a(t_stack_node **stack, char **argv);
-char		**ft_split(char const *s, char c);
-void 		free_stack(t_stack_node *stack);
-t_stack_node		*get_stack_bottom(t_stack_node *stack);
-t_stack_node		*get_stack_before_bottom(t_stack_node *stack);
-t_stack_node		*stack_new(int value);
-void		stack_add_bottom(t_stack_node **stack, t_stack_node *new);
-int			get_stack_size(t_stack_node	*stack);
-int			get_max(t_stack_node *a);
-int			stack_sorted(t_stack_node *a);
-void 		sort_3(t_stack_node **a);
-void    	sort_100(t_stack_node **a, t_stack_node **b);
-void    	push_back_to_a(t_stack_node **a, t_stack_node **b);
-int     	get_max_index_pos(t_stack_node *b);
-int     	count_in_range(t_stack_node *a, int min, int max);
-int 		stack_size(t_stack_node *stack);
-
-
-
-#endif*/

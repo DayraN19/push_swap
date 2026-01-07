@@ -85,6 +85,20 @@ int	ft_sqrt(int n)
 	return (i);
 }
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
+}
+
 void	sort_chunks(t_stack_node **a, t_stack_node **b, int chunk)
 {
 	int	i;

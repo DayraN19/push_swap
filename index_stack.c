@@ -17,7 +17,7 @@ void index_stack(t_stack_node *a)
                 index++;
             j = j->next;
         }
-        i->index = index; // ✅ PAS DE &
+        i->index = index;
         i = i->next;
     }
 }

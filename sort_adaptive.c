@@ -13,5 +13,7 @@ void    sort_adaptive(t_stack_node **a, t_stack_node **b)
     else if (d < 0.5)
         sort_medium(a, b);        // tri moyen (O(n√n))
     else
-        sort_complex(a, b);       // désordre élevé (O(n log n))
+        sort_500(a, b);       // désordre élevé (O(n log n))
 }
+// cree a b c a = simple b = mid c =complex if a < b fait simple mais si c < a fait complex
+//mais disorder dans le sujet

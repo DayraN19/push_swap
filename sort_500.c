@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_500.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 11:13:05 by bgranier          #+#    #+#             */
+/*   Updated: 2026/01/07 11:13:08 by bgranier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 #define CHUNK_SIZE 45  // plus grand chunk pour 500 nombres
@@ -9,6 +21,8 @@ void	sort_500(t_stack_node **a, t_stack_node **b)
 
 	chunk_min = 0;
 	chunk_max = CHUNK_SIZE - 1;
+	if (compute_disorder(*a) == 0)
+		return ;
 	while (*a)
 	{
 		while (count_in_range(*a, chunk_min, chunk_max) > 0)

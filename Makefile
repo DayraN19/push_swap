@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+         #
+#    By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 13:00:48 by bgranier          #+#    #+#              #
-#    Updated: 2026/01/05 14:19:38 by bastiangran      ###   ########.fr        #
+#    Updated: 2026/01/06 12:52:40 by bgranier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,26 +18,20 @@ CFLAGS = -Wall -Werror -Wextra -I . -I $(LIBFT_DIR)
 
 SRC = push_swap.c \
 	init_stack.c \
-	sa.c \
 	sort_500.c \
 	disorder.c \
+	operate.c \
 	sort_simple.c \
 	sort_adaptive.c \
 	sort_medium.c \
 	dispatch_sort.c \
 	sort_complex.c \
 	sort_100.c \
-	operate.c \
 	index_stack.c \
-	sb.c \
-	ss.c \
-	rotate.c \
-	push.c \
 	new_node.c \
 	stack_utils.c \
 	new_stack.c \
 	sorted.c \
-	reverse_rotate.c \
 
 OBJ = $(SRC:.c=.o)
 

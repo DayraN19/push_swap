@@ -3,27 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:09:55 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/05 14:15:36 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/01/06 16:18:08 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_strcmp(char *s1, char *s2)
+int main(int argc, char **argv)
 {
-	int	i;
+    t_stack_node    *a = NULL;
+    t_stack_node    *b = NULL;
 
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
+    if (argc < 2)
+        return (0);
+
+    init_stack_a(&a, &argv[1]);
+    index_stack(a);
+
+    if (argc > 1 && argv[1])
+    {
+        if (ft_strcmp(argv[1], "--simple") == 0)
+            sort_simple(&a, &b);
+        else if (ft_strcmp(argv[1], "--medium") == 0)
+            sort_medium(&a, &b);
+        else if (ft_strcmp(argv[1], "--complex") == 0)
+            sort_complex(&a, &b);
+		else if (ft_strcmp(argv[1], "--adaptive") == 0)
+            sort_adaptive(&a, &b);		
+        else
+            sort_500(&a, &b);  // adaptatif par défaut
+    }
+    free_stack(a);
+    free_stack(b);
+    return (0);
 }
 
 /* int	main(int argc, char **argv)
@@ -53,36 +68,3 @@ static int	ft_strcmp(char *s1, char *s2)
 	free_stack(b);
 	return (0);
 } */
-
-int main(int argc, char **argv)
-{
-    t_stack_node    *a = NULL;
-    t_stack_node    *b = NULL;
-
-    if (argc < 2)
-        return (0);
-
-    init_stack_a(&a, &argv[1]);
-    index_stack(a);
-
-    if (argc > 1 && argv[1])
-    {
-        if (ft_strcmp(argv[1], "--simple") == 0)
-            sort_simple(&a, &b);
-        else if (ft_strcmp(argv[1], "--medium") == 0)
-            sort_medium(&a, &b);
-        else if (ft_strcmp(argv[1], "--complex") == 0)
-            sort_complex(&a, &b);
-        else
-            sort_adaptive(&a, &b);  // adaptatif par défaut
-    }
-    else
-        sort_adaptive(&a, &b);
-    free_stack(a);
-    free_stack(b);
-    return (0);
-}
-
-
-
-
