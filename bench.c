@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 13:02:27 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/08 13:37:34 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:22:57 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	print_bench(t_ctrl *ctrl)
+void	print_bench(t_ctrl *ctrl)
 {
 	ft_printf("%d", ctrl->count_ra);
 }

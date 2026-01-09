@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/08 13:43:21 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:23:04 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,25 @@
 # include <math.h>
 
 
-typedef struct s_ctrl {
-    char    *strat;
-    int     count_ra;
-    int     bench;
-    t_stack_node  *first;
-    t_stack_node *last;
-}   t_ctrl;
-
+typedef struct s_ctrl 
+{
+	char	*strat;
+	int		bench;
+	size_t	count_ra;
+	size_t	count_rb;
+	size_t	count_rr;
+	size_t	count_pb;
+	size_t	count_pa;
+	size_t	count_sa;
+	size_t	count_sb;
+	size_t	count_ss;
+	size_t	count_rra;
+	size_t	count_rrb;
+	size_t	count_rrr;
+	float	count_disorder;
+	t_stack_node	*first;
+	t_stack_node	*second;
+} t_ctrl;
 
 /* ===== init ===== */
 t_stack_node	*new_node(int value);
@@ -74,7 +85,7 @@ void			sort_3(t_stack_node **a);
 void			sort_100(t_stack_node **a, t_stack_node **b);
 void			sort_500(t_stack_node **a, t_stack_node **b);
 void			ctrl_init(t_ctrl *c);
-int	            print_bench(t_ctrl *ctrl);
+void	            print_bench(t_ctrl *ctrl);
 
 
 /* ===== sort utils ===== */

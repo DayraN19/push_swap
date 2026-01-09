@@ -1,5 +1,7 @@
 #include "push_swap.h"
 
+t_ctrl	*c;
+
 void	sa(t_stack_node **a, int print)
 {
 	t_stack_node	*first;
@@ -14,6 +16,7 @@ void	sa(t_stack_node **a, int print)
 	*a = second;
 	if (print)
 		ft_printf("sa\n");
+	c->count_sa++;
 }
 
 void	sb(t_stack_node **b, int print)
@@ -30,6 +33,7 @@ void	sb(t_stack_node **b, int print)
 	*b = second;
 	if (print)
 		ft_printf("sb\n");
+	c->count_sb++;
 }
 
 void	pa(t_stack_node **a, t_stack_node **b, int print)
@@ -44,6 +48,7 @@ void	pa(t_stack_node **a, t_stack_node **b, int print)
 	*a = tmp;
 	if (print)
 		ft_printf("pa\n");
+	c->count_pa++;
 }
 
 void	pb(t_stack_node **a, t_stack_node **b, int print)
@@ -58,6 +63,7 @@ void	pb(t_stack_node **a, t_stack_node **b, int print)
 	*b = tmp;
 	if (print)
 		ft_printf("pb\n");
+	c->count_pb++;	
 }
 
 void	ra(t_stack_node **a, int print)
@@ -76,6 +82,7 @@ void	ra(t_stack_node **a, int print)
 	tmp->next = first;
 	if (print)
 		ft_printf("ra\n");
+	c->count_ra++;
 }
 
 void	rb(t_stack_node **b, int print)
@@ -94,6 +101,7 @@ void	rb(t_stack_node **b, int print)
 	tmp->next = first;
 	if (print)
 		ft_printf("rb\n");
+	c->count_rb++;
 }
 
 void	rra(t_stack_node **a, int print)
@@ -115,6 +123,7 @@ void	rra(t_stack_node **a, int print)
 	*a = last;
 	if (print)
 		ft_printf("rra\n");
+	c->count_rra++;
 }
 
 void	rrb(t_stack_node **b, int print)
@@ -136,6 +145,7 @@ void	rrb(t_stack_node **b, int print)
 	*b = last;
 	if (print)
 		ft_printf("rrb\n");
+	c->count_rrb++;
 }
 
 void	rrr(t_stack_node **a, t_stack_node **b, int print)
@@ -144,4 +154,5 @@ void	rrr(t_stack_node **a, t_stack_node **b, int print)
 	rrb(b, 0);
 	if (print)
 		ft_printf("rrr\n");
+	c->count_rrr++;
 }
