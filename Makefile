@@ -6,7 +6,7 @@
 #    By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 13:00:48 by bgranier          #+#    #+#              #
-#    Updated: 2026/01/06 12:52:40 by bgranier         ###   ########.fr        #
+#    Updated: 2026/01/08 13:36:34 by bgranier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,8 @@ SRC = push_swap.c \
 	stack_utils.c \
 	new_stack.c \
 	sorted.c \
+	bench.c \
+	ctrl_init.c \
 
 OBJ = $(SRC:.c=.o)
 

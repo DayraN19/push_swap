@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/06 14:33:29 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:43:21 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@
 # include <stdio.h>
 # include <stddef.h>
 # include <math.h>
+
+
+typedef struct s_ctrl {
+    char    *strat;
+    int     count_ra;
+    int     bench;
+    t_stack_node  *first;
+    t_stack_node *last;
+}   t_ctrl;
+
 
 /* ===== init ===== */
 t_stack_node	*new_node(int value);
@@ -59,9 +69,12 @@ void			sort_complex(t_stack_node **a, t_stack_node **b);
 void			sort_medium(t_stack_node **a, t_stack_node **b);
 void			sort_simple(t_stack_node **a, t_stack_node **b);
 double			compute_disorder(t_stack_node *a);
+void            dispatch_sort(t_stack_node **a, t_stack_node **b, char *strategy);
 void			sort_3(t_stack_node **a);
 void			sort_100(t_stack_node **a, t_stack_node **b);
 void			sort_500(t_stack_node **a, t_stack_node **b);
+void			ctrl_init(t_ctrl *c);
+int	            print_bench(t_ctrl *ctrl);
 
 
 /* ===== sort utils ===== */

@@ -4,7 +4,7 @@ void dispatch_sort(t_stack_node **a, t_stack_node **b, char *strategy)
 {
 	double disorder = compute_disorder(*a);
 
-	if (!strategy) // Aucun flag fourni -> adaptatif par défaut
+	if (!strategy)
 	{
 		if (stack_size(*a) <= 5)
 			sort_simple(a, b);

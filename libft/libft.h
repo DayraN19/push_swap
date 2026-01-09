@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:06:39 by bgranier          #+#    #+#             */
-/*   Updated: 2025/12/28 19:18:34 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/01/08 13:27:52 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,12 @@ char	**ft_split(char const *s, char c);
 
 typedef struct s_stack_node
 {
-	int			value;
-	int			index;
-	int				pos;
-	int				target_pos;
-	int				cost_a;
-	int				cost_b;
+	int	value;
+	int	index;
+	int	target_pos;
+	int	pos;
+	int	cost_a;
+	int	cost_b;
 	struct s_stack_node	*next;
 }	t_stack_node;
 
